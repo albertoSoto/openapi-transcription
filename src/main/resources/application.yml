@@ -4,12 +4,12 @@ server:
     context-path: /
 
 openai-service:
-  api-key: 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
+  api-key: $OPENAI_API_KEY
   gpt-model: gpt-3.5-turbo
   audio-model: whisper-1
   http-client:
-    read-timeout: 3000
-    connect-timeout: 3000
+    read-timeout: 10000
+    connect-timeout: 10000
   urls:
     base-url: https://api.openai.com/v1
     chat-url: /chat/completions

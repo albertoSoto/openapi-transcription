@@ -7,6 +7,8 @@ This project is a demo utilizing OpenAI's ChatGPT and Whisper API integrated int
 - OpenFeign
 - Lombok
 
+
+
 ### Postman
 
 There is a json file to import, located at OpenAiTranscription.postman_collection.json
@@ -24,6 +26,13 @@ https://upload.io/blog/postman-upload-file-cheat-sheet/
 3. Use the endpoints provided to interact with the ChatGPT and Whisper APIs.
 
 ### Usage
+
+Set up your open ai api key ${OPENAI_API_KEY} in an .env file
+
+.env file contents
+``
+OPENAI_API_KEY=########
+``
 
 This project provides endpoints for interacting with the ChatGPT and Whisper APIs. The endpoints are:
 
