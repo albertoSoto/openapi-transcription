@@ -7,6 +7,11 @@ This project is a demo utilizing OpenAI's ChatGPT and Whisper API integrated int
 - OpenFeign
 - Lombok
 
+### Postman
+
+There is a json file to import, located at OpenAiTranscription.postman_collection.json
+https://upload.io/blog/postman-upload-file-cheat-sheet/
+
 ### Prerequisites
 
 - A Java 17 development environment.

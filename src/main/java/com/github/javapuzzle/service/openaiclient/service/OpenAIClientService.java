@@ -36,10 +36,14 @@ public class OpenAIClientService {
     }
 
     public WhisperTranscriptionResponse createTranscription(TranscriptionRequest transcriptionRequest){
-        WhisperTranscriptionRequest whisperTranscriptionRequest = WhisperTranscriptionRequest.builder()
-                .model(openAIClientConfig.getAudioModel())
-                .file(transcriptionRequest.getFile())
-                .build();
-        return openAIClient.createTranscription(whisperTranscriptionRequest);
+        try{
+            WhisperTranscriptionRequest whisperTranscriptionRequest = WhisperTranscriptionRequest.builder()
+                    .model(openAIClientConfig.getAudioModel())
+                    .file(transcriptionRequest.getFile())
+                    .build();
+            return openAIClient.createTranscription(whisperTranscriptionRequest);
+        }catch (Exception e){
+            return null;
+        }
     }
 }

@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "eb8375db-2432-443b-ac91-778db7a84901",
+		"name": "OpenAiTranscription",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3182810"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8500/api/v1/transcription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/berto/Desktop/media/video_music/Prodigy-Funky Shit (256 kbps).mp3"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8500/api/v1/transcription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8500",
+					"path": [
+						"api",
+						"v1",
+						"transcription"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
