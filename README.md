@@ -7,7 +7,7 @@ This project is a demo utilizing OpenAI's ChatGPT and Whisper API integrated int
 - OpenFeign
 - Lombok
 
-
+https://platform.openai.com/docs/guides/speech-to-text?lang=curl
 
 ### Postman
 

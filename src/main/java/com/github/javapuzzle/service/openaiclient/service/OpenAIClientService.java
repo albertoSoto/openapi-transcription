@@ -10,6 +10,8 @@ import com.github.javapuzzle.service.openaiclient.model.request.ChatRequest;
 import com.github.javapuzzle.service.openaiclient.model.request.Message;
 import com.github.javapuzzle.service.openaiclient.model.response.WhisperTranscriptionResponse;
 import lombok.RequiredArgsConstructor;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
@@ -17,7 +19,7 @@ import java.util.Collections;
 @Service
 @RequiredArgsConstructor
 public class OpenAIClientService {
-
+    Logger logger = LogManager.getLogger(OpenAIClientService.class);
     private final OpenAIClient openAIClient;
     private final OpenAIClientConfig openAIClientConfig;
 
@@ -43,7 +45,10 @@ public class OpenAIClientService {
                     .build();
             return openAIClient.createTranscription(whisperTranscriptionRequest);
         }catch (Exception e){
-            return null;
+            logger.error("Whisper transcription", e);
+            WhisperTranscriptionResponse response = new WhisperTranscriptionResponse();
+            response.setText("Daily quote exceeded or invalid token");
+            return response;
         }
     }
 }
