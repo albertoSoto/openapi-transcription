@@ -42,3 +42,4 @@ This project provides endpoints for interacting with the ChatGPT and Whisper API
 ### License
 
 This project is licensed under the MIT License. See LICENSE file for details.
+Based on repo https://github.com/sawankarn/chatgpt-whisper-spring-boot
